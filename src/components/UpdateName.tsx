@@ -3,7 +3,8 @@ import { useState } from 'react';
 // Before Actions
 export const UpdateName = () => {
   const [name, setName] = useState('');
-  const [error, setError] = useState(false);
+  const [, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [isPending, setIsPending] = useState(false);
 
   const updateName = async (name: string) => {
@@ -19,8 +20,10 @@ export const UpdateName = () => {
     setIsPending(false);
     if (error) {
       setError(error);
+      setErrorMessage('error has occurred');
       return;
     }
+    setErrorMessage('');
     console.log('redirection');
   };
 
@@ -30,7 +33,7 @@ export const UpdateName = () => {
       <button onClick={handleSubmit} disabled={isPending}>
         Update
       </button>
-      {error && <p>{error}</p>}
+      {errorMessage && <p>{errorMessage}</p>}
     </div>
   );
 };
