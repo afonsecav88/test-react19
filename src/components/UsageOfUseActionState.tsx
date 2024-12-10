@@ -8,8 +8,10 @@ async function increment(previousState: number) {
 }
 
 export const UsageOfUseActionState = () => {
+  //https://react.dev/reference/react/useActionState
   // Usage
   // Using information returned by a form action
+  //Call useActionState at the top level of your component to access the return value of an action from the last time a form was submitted.
   const [state, formAction, isPending] = useActionState(increment, 0);
   console.log('state', state);
   return (
