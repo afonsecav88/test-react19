@@ -1,8 +1,12 @@
 import './App.css';
-import { UpdateName } from './components/UpdateName';
+import { UsageOfUseActionState } from './components/UsageOFUseActionState';
 
 function App() {
-  return <UpdateName />;
+  return (
+    <>
+      <UsageOfUseActionState />
+    </>
+  );
 }
 
 export default App;
