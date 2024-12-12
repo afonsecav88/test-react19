@@ -2,11 +2,7 @@ import './App.css';
 import { UsageOfUseActionState } from './components/UsageOFUseActionState';
 
 function App() {
-  return (
-    <>
-      <UsageOfUseActionState />
-    </>
-  );
+  return <UsageOfUseActionState />;
 }
 
 export default App;
